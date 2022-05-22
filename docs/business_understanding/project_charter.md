@@ -54,7 +54,7 @@ Finalmente, se realizaría el despliegue.
   Archivos en on-prem files en el servidor del cliente, con extensión CSV. 
 
 * Data movement from on-prem to Azure using ADF or other data movement tools (Azcopy, EventHub etc.) to move either
-  * GCP para el almacenado los datos raw, para luego enviarlo a DVC y en allí con el pypeline de preprocesamiento se entregarán los datos al modelo y una vez hecho esto se enviara el resultado de dicho entrenamiento, junto con el dataset preprocesado al repositorio de github, el versionado del codigo se hara por medio de Git.
+  * GCP para el almacenado los datos raw, para luego enviarlo a DVC y allí con el pypeline de preprocesamiento se entregarán los datos al modelo y una vez hecho esto se enviara el resultado de dicho entrenamiento, junto con el dataset preprocesado al repositorio de github, el versionado del codigo se hara por medio de Git.
 
 * What tools and data storage/analytics resources will be used in the solution e.g.,
   * DVC, weights and biases , GCP, MLflow 
