@@ -9,12 +9,10 @@ El cliente es la empresa CNT móvil, CNT móvil es una empresa dedicada a la pre
 
 * What business problems are we trying to address?
 
-<<<<<<< HEAD
+ 
 CNT móvil en los últimos años ha presentado tasas importantes el retiro del servicio, ya sea por falta de pago (deudores morosos) o por abandono del servicio (deserción) (más de 11000 líneas retiradas entre 2017 y 2019, solo en las ciudades de Ambato y Cuenca), causando inestabilidad financiera a la empresa y posiblemente una futura quiebra si no se toman acciones oportunas.
 
- 
-=======
->>>>>>> d064697f5e2c3c423cb7ba39633fb7b5edb19dc9
+
 ## Scope
 * What data science solutions are we trying to build?
 
