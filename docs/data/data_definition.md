@@ -72,11 +72,13 @@ Estadísticas descriptivas de los campos numéricos:
     *	Total registros:  27236
     *	Formato de almacenamiento: archivo .csv
     *	Tipos de datos: estructurados
+
 ![2](https://user-images.githubusercontent.com/66392216/169719920-d8402d62-e610-4aa1-a5fd-92ebb44cfe50.JPG)
 
 ![3](https://user-images.githubusercontent.com/66392216/169719957-bf5b17c4-77c9-4009-9755-b7eceb4ceef8.JPG)
 
 ![4](https://user-images.githubusercontent.com/66392216/169719988-2be9dbfc-8ecd-426c-8882-963ff67d27fb.JPG)
+
 
 3.	clientes_lineas_activas.csv
 
