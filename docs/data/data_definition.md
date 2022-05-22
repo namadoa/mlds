@@ -12,11 +12,38 @@ _**For ease of modifying this report, placeholder links are included in this pag
 
 | Dataset Name | Original Location   | Destination Location  | Data Movement Tools / Scripts | Link to Report |
 | ---:| ---: | ---: | ---: | -----: |
-| Dataset 1 | Brief description of its orignal location | Brief description of its destination location | [script1.py](link/to/python/script/file/in/Code) | [Dataset 1 Report](link/to/report1)|
-| Dataset 2 | Brief description of its orignal location | Brief description of its destination location | [script2.R](link/to/R/script/file/in/Code) | [Dataset 2 Report](link/to/report2)|
+| lineas_activas.csv | Los datos se obtendrán  a partir de archivos csv almacenados en Google cloud storage (GCP) | [script1.py](link/to/python/script/file/in/Code) | [Dataset 1 Report](link/to/report1)|
+| lineas_retiradas.csv | Los datos se obtendrán  a partir de archivos csv almacenados  | [script2.R](link/to/R/script/file/in/Code) | [Dataset 2 Report](link/to/report2)|
 
 * Dataset1 summary. <Provide brief summary of the data, such as how to access the data. More detailed information should be in the Dataset1 Report.>
-* Dataset2 summary. <Provide brief summary of the data, such as how to access the data. More detailed information should be in the Dataset2 Report.> 
+
+1.	lineas_activas.csv
+    *	Descripción: Líneas móviles activas
+    *	Contenido: Información relacionada a las líneas móviles activas hasta el año 2019
+    *	Total campos: 12
+    *	Total registros:  86550
+    *	Formato de almacenamiento: archivo .csv
+    *	Tipos de datos: estructurados
+Información de los campos:
+
+RangeIndex: 86550 entries, 0 to 86549
+Data columns (total 12 columns):
+ #   Column                Non-Null Count  Dtype         
+---  ------                --------------  -----         
+ 0   código del producto   86550 non-null  int64         
+ 1   código del cliente    86550 non-null  int64         
+ 2   fecha de instalación  86550 non-null  datetime64[ns]
+ 3   fecha de retiro       86550 non-null  object        
+ 4   plan                  86550 non-null  object        
+ 5   tipo de plan          86550 non-null  object        
+ 6   valor plan            85972 non-null  float64       
+ 7   estado                86550 non-null  object        
+ 8   ciclo                 86550 non-null  object        
+ 9   estado financiero     86550 non-null  object        
+ 10  saldo pendiente       86550 non-null  float64      
+ 11  valor en reclamo      86550 non-null  float64
+
+Estadísticas descriptivas de los campos numéricos:
 
 ## Processed Data
 | Processed Dataset Name | Input Dataset(s)   | Data Processing Tools/Scripts | Link to Report |
