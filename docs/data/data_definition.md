@@ -24,6 +24,7 @@ _**For ease of modifying this report, placeholder links are included in this pag
     *	Total registros:  86550
     *	Formato de almacenamiento: archivo .csv
     *	Tipos de datos: estructurados
+
 Información de los campos:
 
 RangeIndex: 86550 entries, 0 to 86549
@@ -46,8 +47,18 @@ Data columns (total 12 columns):
 
 Estadísticas descriptivas de los campos numéricos:
 
+|        | valor plan    | saldo pendiente |  valor del reclamo |
+| ----------- | ----------- | ----------- | ----------- |
+|count|	85972.000000|  	86550.000000|	86550.000000|
+|mean|	77.220173|	7.185170|	0.000129|
+|std|	244.716541|	136.252221|	0.038070|
+|min|	0.000000|	-2.630000|	0.000000|
+|25%|	0.000000|	0.000000|	0.000000|
+|50%|	0.000000|	0.000000|	0.000000|
+|75%|	47.980000|	0.000000|	0.000000|
+|max|	2618.000000|	36866.670000|	11.200000|
 
-
+![1](https://user-images.githubusercontent.com/66392216/169719710-fe183a3a-a610-441e-97e0-da1ad4d87c93.JPG)
 
 ## Processed Data
 | Processed Dataset Name | Input Dataset(s)   | Data Processing Tools/Scripts | Link to Report |
