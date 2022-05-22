@@ -92,7 +92,18 @@ Data columns (total 13 columns):
  12 | valor en reclamo |     27236 non-null | int64  |       
 
 
-![3](https://user-images.githubusercontent.com/66392216/169719957-bf5b17c4-77c9-4009-9755-b7eceb4ceef8.JPG)
+|        | valor plan    | saldo pendiente |  valor del reclamo |
+| ----------- | ----------- | ----------- | ----------- |
+|count	|27175.000000|	27236.000000|	27236.0|
+|mean	|225.730198|	37.277095|	0.0|
+|std	|325.581351	|137.877364|	0.0|
+|min	|0.000000|	-0.040000	|0.0|
+|25%	|0.000000|	0.000000	|0.0|
+|50%	|69.950000|	0.000000	|0.0|
+|75%	|375.880000|	14.630000	|0.0|
+|max	|2618.000000|	2295.900000	|0.0|
+
+
 
 ![4](https://user-images.githubusercontent.com/66392216/169719988-2be9dbfc-8ecd-426c-8882-963ff67d27fb.JPG)
 
