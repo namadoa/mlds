@@ -45,6 +45,7 @@ Data columns (total 12 columns):
 
 Estadísticas descriptivas de los campos numéricos:
 
+![plot](C:\Users\Cesar\Desktop)
 ![alt text](C:\Users\Cesar\Desktop)
 
 
