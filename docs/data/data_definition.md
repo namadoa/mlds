@@ -45,7 +45,8 @@ Data columns (total 12 columns):
 
 Estadísticas descriptivas de los campos numéricos:
 
-image.png
+![alt text](C:\Users\Cesar\Desktop)
+
 
 ## Processed Data
 | Processed Dataset Name | Input Dataset(s)   | Data Processing Tools/Scripts | Link to Report |
