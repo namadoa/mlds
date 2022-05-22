@@ -73,7 +73,24 @@ Estadísticas descriptivas de los campos numéricos:
     *	Formato de almacenamiento: archivo .csv
     *	Tipos de datos: estructurados
 
-![2](https://user-images.githubusercontent.com/66392216/169719920-d8402d62-e610-4aa1-a5fd-92ebb44cfe50.JPG)
+RangeIndex: 27236 entries, 0 to 27235
+Data columns (total 13 columns):
+| #      | Column |  Non-Null Count     | Dtype | 
+| ----------- | ----------- | ----------- | ----------- |      
+ 0 |  código del producto|   27236 non-null|  int64 |        
+ 1 |  código del cliente|    27236 non-null|  int64 |        
+ 2 |  fecha de instalación | 27236 non-null|  datetime64[ns]|
+ 3 |  fecha de retiro|       27236 non-null | datetime64[ns]|
+ 4 |  plan  |                27236 non-null|  object        
+ 5 |  tipo de plan  |        27236 non-null | object|       
+ 6 |  valor plan  |          27175 non-null|  float64 |      
+ 7 |  código estado |        27236 non-null |int64 |        
+ 8 |  estado |               27236 non-null|  object |       
+ 9 |  ciclo   |              27236 non-null|  object|        
+ 10 | estado financiero|     27236 non-null|  object|        
+ 11 | saldo pendiente|      27236 non-null | float64|       
+ 12 | valor en reclamo |     27236 non-null | int64  |       
+
 
 ![3](https://user-images.githubusercontent.com/66392216/169719957-bf5b17c4-77c9-4009-9755-b7eceb4ceef8.JPG)
 
