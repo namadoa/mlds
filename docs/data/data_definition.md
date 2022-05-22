@@ -89,6 +89,10 @@ Estadísticas descriptivas de los campos numéricos:
     *	Formato de almacenamiento: archivo .csv
     *	Tipos de datos: estructurados
 
+![5](https://user-images.githubusercontent.com/66392216/169720563-e3290c3f-f1e5-4514-9074-748e28ed866b.JPG)
+
+![6](https://user-images.githubusercontent.com/66392216/169720572-8374a0b9-7614-462e-a982-220e3f8045c9.JPG)
+
 
 ## Processed Data
 | Processed Dataset Name | Input Dataset(s)   | Data Processing Tools/Scripts | Link to Report |
