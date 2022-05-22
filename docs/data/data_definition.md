@@ -93,6 +93,46 @@ Estadísticas descriptivas de los campos numéricos:
 
 ![6](https://user-images.githubusercontent.com/66392216/169720572-8374a0b9-7614-462e-a982-220e3f8045c9.JPG)
 
+4.	clientes_lineas_retiradas.csv
+
+    *	Descripción: Clientes de las líneas móviles retiradas
+    *	Contenido: Información relacionada a los clientes dueños de las líneas retiradas entre 2017 y 2019.
+    *	Total campos: 11
+    *	Total registros:  21191
+    *	Formato de almacenamiento: archivo .csv
+    *	Tipos de datos: estructurados
+
+
+![7](https://user-images.githubusercontent.com/66392216/169720630-5a8711da-f0e8-433b-a361-c66a328a0117.JPG)
+
+![8](https://user-images.githubusercontent.com/66392216/169720634-907783f5-173b-43fa-948c-bc45d5b5f5ac.JPG)
+
+5.	quejas_lineas.csv
+
+    *	Descripción: Quejas sobre las líneas móviles
+    *	Contenido: Quejas sobre las líneas móviles tanto activas como retiradas
+    *	Total campos: 8
+    *	Total registros:  10816
+    *	Formato de almacenamiento: archivo .csv
+    *	Tipos de datos: estructurados
+
+
+![9](https://user-images.githubusercontent.com/66392216/169720831-8e6eb661-2722-4f21-a499-c1fbada304ee.JPG)
+
+![10](https://user-images.githubusercontent.com/66392216/169720833-5edc0a99-ff22-456f-8fc4-95c7af1e5b46.JPG)
+
+6.	reclamos_lineas.csv
+
+    *	Descripción: Líneas móviles activas
+    *	Contenido: Información relacionada a las líneas móviles activas hasta el año 2019
+    *	Total campos: 9
+    *	Total registros: 3102
+    *	Formato de almacenamiento: archivo .csv
+    *	Tipos de datos: estructurados
+
+![11](https://user-images.githubusercontent.com/66392216/169720881-5aeb31ad-2534-4907-959b-b03725043b6c.JPG)
+
+![12](https://user-images.githubusercontent.com/66392216/169720883-a0646177-8152-4ed0-9de1-9818ab81aa6a.JPG)
 
 ## Processed Data
 | Processed Dataset Name | Input Dataset(s)   | Data Processing Tools/Scripts | Link to Report |
