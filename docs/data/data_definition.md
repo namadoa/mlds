@@ -106,7 +106,21 @@ Data columns (total 13 columns):
     *	Formato de almacenamiento: archivo .csv
     *	Tipos de datos: estructurados
 
-![5](https://user-images.githubusercontent.com/66392216/169720563-e3290c3f-f1e5-4514-9074-748e28ed866b.JPG)
+Data columns (total 11 columns):
+| #      | Column |  Non-Null Count     | Dtype | 
+| ----------- | ----------- | ----------- | ----------- |  
+|0   |código del cliente |     58052 non-null | int64 |
+|1   |tipo de cliente  |       58052 non-null | object |
+| 2   |tipo de identificación | 58052 non-null |  object |
+| 3   |fecha de nacimiento  |   56902 non-null|  object|
+| 4   |género  |                6109 non-null |  object|
+| 5   |estado civil |           4948 non-null |  object|
+| 6   |profesión |              4819 non-null|   object|
+| 7   |grado de escolaridad|    3267 non-null  | object|
+| 8  | nivel de ingresos|       3300 non-null |  object|
+| 9   |nivel de egresos |       3282 non-null|   object|
+
+
 
 ![6](https://user-images.githubusercontent.com/66392216/169720572-8374a0b9-7614-462e-a982-220e3f8045c9.JPG)
 
@@ -119,8 +133,20 @@ Data columns (total 13 columns):
     *	Formato de almacenamiento: archivo .csv
     *	Tipos de datos: estructurados
 
+| #      | Column |  Non-Null Count     | Dtype | 
+| ----------- | ----------- | ----------- | ----------- |  
+| 0  | código del cliente    |  21191 non-null | int64 |
+| 1 |  tipo de cliente     |    21191 non-null | object|
+ |2  | tipo de identificación|  21191 non-null | object|
+ |3  | fecha de nacimiento   |  20842 non-null  |object|
+ |4  | género   |               2182 non-null  | object|
+ |5   |estado civil     |       1737 non-null |  object|
+|6 |  profesión   |            1601 non-null  | object|
+ |7   |grado de escolaridad |   1092 non-null  | object|
+|9	| nivel de ingresos    |   1145 non-null  | object|
+ |9  | nivel de egresos   |     1125 non-null |  object|
+|10	 | ciudad   |               21191 non-null|    object|
 
-![7](https://user-images.githubusercontent.com/66392216/169720630-5a8711da-f0e8-433b-a361-c66a328a0117.JPG)
 
 ![8](https://user-images.githubusercontent.com/66392216/169720634-907783f5-173b-43fa-948c-bc45d5b5f5ac.JPG)
 
@@ -134,7 +160,18 @@ Data columns (total 13 columns):
     *	Tipos de datos: estructurados
 
 
-![9](https://user-images.githubusercontent.com/66392216/169720831-8e6eb661-2722-4f21-a499-c1fbada304ee.JPG)
+RangeIndex: 10817 entries, 0 to 10816
+Data columns (total 8 columns):
+| #      | Column |  Non-Null Count     | Dtype | 
+| ----------- | ----------- | ----------- | ----------- |         
+| 0   |número de solicitud | 10817 non-null | int64   |      
+| 1   |fecha de registro   | 10817 non-null  |datetime64[ns]|
+| 2   |producto            | 10817 non-null | int64  |       
+| 3   |tipo                | 10817 non-null | object  |      
+| 4   |estado              | 10817 non-null | object |       
+| 5   |fecha de atención   | 9818 non-null  | datetime64[ns]|
+| 6   |tipo de observación | 10817 non-null | object  |      
+| 7   |observación         | 10817 non-null | object |   
 
 ![10](https://user-images.githubusercontent.com/66392216/169720833-5edc0a99-ff22-456f-8fc4-95c7af1e5b46.JPG)
 
@@ -147,7 +184,20 @@ Data columns (total 13 columns):
     *	Formato de almacenamiento: archivo .csv
     *	Tipos de datos: estructurados
 
-![11](https://user-images.githubusercontent.com/66392216/169720881-5aeb31ad-2534-4907-959b-b03725043b6c.JPG)
+RangeIndex: 3102 entries, 0 to 3101
+Data columns (total 9 columns):
+| #      | Column |  Non-Null Count     | Dtype | 
+| ----------- | ----------- | ----------- | ----------- |         
+| 0  | número de solicitud| 3102 non-null  | int64  |       
+| 1  | fecha de registro |   3102 non-null  | datetime64[ns]|
+| 2  | producto    |         3102 non-null  | int64  |       
+| 3  | tipo   |              3102 non-null  | object |       
+| 4  | estado |              3102 non-null  | object  |      
+| 5  | fecha de atención |   3102 non-null  | datetime64[ns]|
+| 6  | valor reclamado |     3102 non-null  | float64  |     
+| 7  | tipo de observación | 3102 non-null  | object  |      
+| 8  | observación  |        3101 non-null  | object|
+
 
 ![12](https://user-images.githubusercontent.com/66392216/169720883-a0646177-8152-4ed0-9de1-9818ab81aa6a.JPG)
 
