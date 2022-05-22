@@ -12,8 +12,12 @@ _**For ease of modifying this report, placeholder links are included in this pag
 
 | Dataset Name | Original Location   | Destination Location  | Data Movement Tools / Scripts | Link to Report |
 | ---:| ---: | ---: | ---: | -----: |
-| lineas_activas.csv | Los datos se obtendrán  a partir de archivos csv almacenados en Google cloud storage (GCP) | [script1.py](link/to/python/script/file/in/Code) | [Dataset 1 Report](link/to/report1)|
-| lineas_retiradas.csv | Los datos se obtendrán  a partir de archivos csv almacenados  | [script2.R](link/to/R/script/file/in/Code) | [Dataset 2 Report](link/to/report2)|
+| lineas_activas.csv | Los datos se obtendrán  a partir de archivos csv almacenados en Google cloud storage (GCP) | Los datos se almacenarán de manera estructurada en el almacen de datos de Big query| [script1.py](link/to/python/script/file/in/Code) | [Dataset 1 Report](link/to/report1)|
+| lineas_retiradas.csv | Los datos se obtendrán  a partir de archivos csv almacenados en Google cloud storage (GCP)  | Los datos se almacenarán de manera estructurada en el almacen de datos de Big query | [script1.py](link/to/R/script/file/in/Code) | [Dataset 2 Report](link/to/report2)|
+| clientes_lineas_activas.csv | Los datos se obtendran  partir de archivos csv almacenados en Google cloud storage (GCP)  | Los datos se almacenarán de manera estructurada en el almacen de datos de Big query | [script1.py](link/to/R/script/file/in/Code) | [Dataset 3 Report](link/to/report2)|
+| clientes_lineas_retiradas.csv | Los datos se obtendran  partir de archivos csv almacenados en Google cloud storage (GCP)  | Los datos se almacenarán de manera estructurada en el almacen de datos de Big query | [script1.py](link/to/R/script/file/in/Code) | [Dataset 4 Report](link/to/report2)|
+| quejas_lineas.csv | Los datos se obtendran  partir de archivos csv almacenados en Google cloud storage (GCP)  | Los datos se almacenarán de manera estructurada en el almacen de datos de Big query | [script1.py](link/to/R/script/file/in/Code) | [Dataset 5 Report](link/to/report2)|
+| reclamos_lineas.csv| Los datos se obtendran  partir de archivos csv almacenados en Google cloud storage (GCP)  | Los datos se almacenarán de manera estructurada en el almacen de datos de Big query | [script1.py](link/to/R/script/file/in/Code) | [Dataset 6 Report](link/to/report2)|
 
 * Dataset1 summary. <Provide brief summary of the data, such as how to access the data. More detailed information should be in the Dataset1 Report.>
 
@@ -59,6 +63,30 @@ Estadísticas descriptivas de los campos numéricos:
 |max|	2618.000000|	36866.670000|	11.200000|
 
 ![1](https://user-images.githubusercontent.com/66392216/169719710-fe183a3a-a610-441e-97e0-da1ad4d87c93.JPG)
+
+2.	lineas_retiradas.csv
+
+    *	Descripción: Líneas móviles retiradas
+    *	Contenido: Información relacionada a las líneas móviles retiradas entre los años 2017 y 2019
+    *	Total campos: 13
+    *	Total registros:  27236
+    *	Formato de almacenamiento: archivo .csv
+    *	Tipos de datos: estructurados
+![2](https://user-images.githubusercontent.com/66392216/169719920-d8402d62-e610-4aa1-a5fd-92ebb44cfe50.JPG)
+
+![3](https://user-images.githubusercontent.com/66392216/169719957-bf5b17c4-77c9-4009-9755-b7eceb4ceef8.JPG)
+
+![4](https://user-images.githubusercontent.com/66392216/169719988-2be9dbfc-8ecd-426c-8882-963ff67d27fb.JPG)
+
+3.	clientes_lineas_activas.csv
+
+    *	Descripción: Clientes de las líneas móviles activas
+    *	Contenido: Información relacionada a los clientes dueños de la líneas activas hasta 2019.
+    *	Total campos: 11
+    *	Total registros:  58052
+    *	Formato de almacenamiento: archivo .csv
+    *	Tipos de datos: estructurados
+
 
 ## Processed Data
 | Processed Dataset Name | Input Dataset(s)   | Data Processing Tools/Scripts | Link to Report |
