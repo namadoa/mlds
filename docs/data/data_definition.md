@@ -28,19 +28,20 @@ Información de los campos:
 
 RangeIndex: 86550 entries, 0 to 86549
 Data columns (total 12 columns):
- |#   Column |               Non-Null Count | Dtype |        
+
+|#   Column | Non-Null Count | Dtype |        
 | ---:| ---: | ---: | ---: |      
 |0   código del producto   |86550 non-null  |int64 |        
 |1   código del cliente    |86550 non-null  |int64 |        
 |2   fecha de instalación  |86550 non-null  |datetime64[ns]|
 |3   fecha de retiro       |86550 non-null  |object|       
-|4   plan                  |86550 non-null  |object    |    
-|5   tipo de plan          |86550 non-null  |object   |     
-|6   valor plan            |85972 non-null  |float64 |      
-|7   estado                |86550 non-null  |object   |     
-|8   ciclo                 |86550 non-null  |object  |      
-|9   estado financiero     |86550 non-null  |object   |     
-|10  saldo pendiente       |86550 non-null  |float64   |   
+|4   plan                  |86550 non-null  |object|    
+|5   tipo de plan          |86550 non-null  |object|     
+|6   valor plan            |85972 non-null  |float64|      
+|7   estado                |86550 non-null  |object|     
+|8   ciclo                 |86550 non-null  |object|      
+|9   estado financiero     |86550 non-null  |object|     
+|10  saldo pendiente       |86550 non-null  |float64|   
 |11  valor en reclamo      |86550 non-null  |float64|
 
 Estadísticas descriptivas de los campos numéricos:
