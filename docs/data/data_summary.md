@@ -70,12 +70,6 @@ Este será el dataset definitivo con el que realizaremos las tareas de aprendiza
 
 ![image](https://user-images.githubusercontent.com/66392216/171030990-b3680786-610d-4510-87fb-14ce8572a6ee.png)
 
-
->!## Variable ranking
-
-
-
-
 ## Relationship between explanatory variables and target variable
 
 Una de las características de las líneas móviles directamente relacionada con el retiro del servicio por falta de pago naturalmente es el saldo pendiente del servicio. Dado esto analizaremos la correlación que hay entre las diferentes variables cuantitativas y el saldo pendiente:
