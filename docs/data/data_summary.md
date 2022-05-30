@@ -39,7 +39,31 @@ Hacemos recuento de los posible valores de los atributos categóricos del datase
 
 ## Data quality summary
 
+En general los datos se encuentran sin anomalías graves ni sesgos evidentes, las inconsistencias como la diferencia entre el promedio anual de reclamos es muy diferente a la media del resto de valores, sin  embargo, esto tiene una explicación (ya se ha explicado en el capítulo anterior)
+
 ## Target variable
+
+Añadimos la columna Retiro, que indica si una línea está retirada o no (1: retirada, 0: no retirada).
+
+![image](https://user-images.githubusercontent.com/66392216/171029311-1930731a-61fd-4280-9972-3870564b6515.png)
+
+Se crea la columna Deserción, donde "1" significa que el usuario desistió del servicio y "0" que no desistió del servicio, a partir de la columna Estado:
+
+![image](https://user-images.githubusercontent.com/66392216/171030653-8aec5f0b-8fb4-42e9-81e4-552902db19c6.png)
+
+Creamos la columna Clase con los siguientes valores:
+
+* 0 - Activo
+* 1 - Retirado por falta de pago
+* 2 - Retiro voluntario (deserción)
+
+![image](https://user-images.githubusercontent.com/66392216/171030736-4e9d02cf-f8de-40e3-8fa1-fdfb5aea705a.png)
+
+Eliminamos la columnas Estado, Retiro y Deserción utilizadas para calcular la columna Clase, y  establecemos la columna Código del producto cómo indice del dataset:
+
+![image](https://user-images.githubusercontent.com/66392216/171030823-b5fcf5a5-13c8-4853-9424-5d5009cae7d5.png)
+
+
 
 ## Individual variables
 
