@@ -63,13 +63,21 @@ Eliminamos la columnas Estado, Retiro y Deserción utilizadas para calcular la c
 
 ![image](https://user-images.githubusercontent.com/66392216/171030823-b5fcf5a5-13c8-4853-9424-5d5009cae7d5.png)
 
+Este será el dataset definitivo con el que realizaremos las tareas de aprendizaje supervisado y no supervisado:
 
+![image](https://user-images.githubusercontent.com/66392216/171030990-b3680786-610d-4510-87fb-14ce8572a6ee.png)
 
 ## Individual variables
 
+
+
 ## Variable ranking
 
+
+
+
 ## Relationship between explanatory variables and target variable
+
 
 
 
