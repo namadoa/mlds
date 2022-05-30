@@ -75,5 +75,29 @@ Este será el dataset definitivo con el que realizaremos las tareas de aprendiza
 
 
 
+
 ## Relationship between explanatory variables and target variable
 
+Una de las características de las líneas móviles directamente relacionada con el retiro del servicio por falta de pago naturalmente es el saldo pendiente del servicio. Dado esto analizaremos la correlación que hay entre las diferentes variables cuantitativas y el saldo pendiente:
+
+![image](https://user-images.githubusercontent.com/66392216/171045179-56ec598b-9810-495b-af3f-c0d10d612440.png)
+
+Se encuentra que el coeficiente de correlación es muy bajo para cada una de las características, por lo cual se procede a verificar con una de estas variables, especificamente el valor del plan si se cumple el supuesto de homocedasticidad, es decir, las muestras tienen varianzas homogéneas:
+
+Las muestras no tienen varianzas homogéneas (rechazar H0) p = 0.000
+
+Efectivamente las muestras no tienen varianzas homogéneas, por lo tanto se procede a calcular la correlación con el coeficiente de correlación de Spearman:
+
+Coeficiente de correlación de Spearman: 0.57
+pvalue: 0.00
+Las muestras están correlacionadas (rechazar H0) p = 0.000
+
+Como se puede observar el coeficiente correlación para la variable *valor plan* aumentó de 0.044804 a 0.57, con un p-valor = 0, indicando un alto nivel de significancia estadística.
+
+![image](https://user-images.githubusercontent.com/66392216/171045323-486bf569-d8e9-4f9a-8020-5e531a9baa66.png)
+
+Según el gráfico de correlación anterior entre las variables *saldo pendiente* y *valor plan*, este coeficiente se podría incluso mejorar ya que se observan algunos datos atípicos.
+
+En la siguiente tabla se observa que la correlación entre las variables cuantitativas y el saldo pendiente aumenta considerablemente usando el coeficiente correlación de Spearman:
+
+![image](https://user-images.githubusercontent.com/66392216/171045381-b9f6c8a6-ff8a-4511-abc2-189c6c0fb14d.png)
