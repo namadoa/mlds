@@ -69,17 +69,17 @@ Este será el dataset definitivo con el que realizaremos las tareas de aprendiza
 
 ## Individual variables
 
-
+dsf
 
 ## Variable ranking
 
-
+fdsfsd
 
 
 ## Relationship between explanatory variables and target variable
 
 
-
+sdfsd
 
 
 Se observa más de un 89% de datos faltantes para las columnas Género, Estado 
