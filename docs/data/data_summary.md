@@ -9,6 +9,14 @@ Cargamos la información de las líneas móviles telefónicas activas y retirada
 ![1](https://user-images.githubusercontent.com/66392216/171025376-1555b59f-97da-4a49-9b4c-00d1182970b9.JPG)
 
 ![2](https://user-images.githubusercontent.com/66392216/171025523-68ad5aa9-3846-419e-918f-0d68d5908bec.JPG)
+
+Se hace la verificación de las columnas 
+
+![3](https://user-images.githubusercontent.com/66392216/171025833-6eaba477-58c7-4946-81de-56504aa78d7b.JPG)
+
+![4](https://user-images.githubusercontent.com/66392216/171026323-c38faba0-ea0c-4a81-95e4-c341a54953ba.JPG)
+
+
 ## Data quality summary
 
 ## Target variable
