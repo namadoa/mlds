@@ -16,6 +16,8 @@ Se hace la verificación de las columnas
 
 ![4](https://user-images.githubusercontent.com/66392216/171026323-c38faba0-ea0c-4a81-95e4-c341a54953ba.JPG)
 
+![5](https://user-images.githubusercontent.com/66392216/171026501-0c24a0bb-d976-48f0-bba2-7e76e1d977df.JPG)
+
 
 ## Data quality summary
 
