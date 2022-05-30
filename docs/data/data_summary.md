@@ -63,26 +63,17 @@ Eliminamos la columnas Estado, Retiro y Deserción utilizadas para calcular la c
 
 ![image](https://user-images.githubusercontent.com/66392216/171030823-b5fcf5a5-13c8-4853-9424-5d5009cae7d5.png)
 
+
+## Individual variables
+
 Este será el dataset definitivo con el que realizaremos las tareas de aprendizaje supervisado y no supervisado:
 
 ![image](https://user-images.githubusercontent.com/66392216/171030990-b3680786-610d-4510-87fb-14ce8572a6ee.png)
 
-## Individual variables
-
-dsf
 
 ## Variable ranking
 
-fdsfsd
 
 
 ## Relationship between explanatory variables and target variable
 
-
-sdfsd
-
-
-Se observa más de un 89% de datos faltantes para las columnas Género, Estado 
-civil, Profesión, Grado de escolaridad, Nivel de ingresos y de egresos. Esto se debe a que en el sistema transaccional no es requerido ingresar esta información al momento de registrar nuevos usuarios. Otras columnas con valores faltantes pero en una medida mucho menor que las antes mecionadas son las columnas Tipo de identificación y Fecha de nacimiento.
-
-Este dataset no contiene datos numéricos a parte del código del cliente por lo que el método describe() no arroja información de importancia.
