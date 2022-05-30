@@ -71,7 +71,7 @@ Este será el dataset definitivo con el que realizaremos las tareas de aprendiza
 ![image](https://user-images.githubusercontent.com/66392216/171030990-b3680786-610d-4510-87fb-14ce8572a6ee.png)
 
 
-#### Variable ranking
+>!## Variable ranking
 
 
 
