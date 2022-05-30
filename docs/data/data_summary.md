@@ -18,6 +18,24 @@ Se hace la verificación de las columnas
 
 ![5](https://user-images.githubusercontent.com/66392216/171026501-0c24a0bb-d976-48f0-bba2-7e76e1d977df.JPG)
 
+Se observan valores faltantes en la columna Fecha de retiro y en la columna Edad. La primera es debido a que el dataset también contiene productos activos y la segunda si se debe a registros incompletos.
+
+![6](https://user-images.githubusercontent.com/66392216/171026689-31bc6edb-046d-4997-8573-1e9006217384.JPG)
+
+De acuerdo a la media, desviación estándar, valor mínimo y máximo de cada una de las columnas, no se encuentran valores por fuera de lo normal. Se observa un valor máximo de los campos valor del plan, saldo pendiente y valor promedio de reclamos anual muy alto con respecto a la media, pero esto se debe a que existen algunos clientes corporativos los cuales pueden presentar este tipo de valores.
+
+Verificamos valores de las variables categóricas del dataset:
+
+![7](https://user-images.githubusercontent.com/66392216/171026873-92c750f9-8a9d-4ffb-b7e9-02ace93d3294.JPG)
+
+
+Hacemos recuento de los posible valores de los atributos categóricos del dataset de líneas activas:
+
+![8](https://user-images.githubusercontent.com/66392216/171027079-9e3a2dc6-1c57-4ace-a404-b2b26ecbabd9.JPG)
+
+![9](https://user-images.githubusercontent.com/66392216/171027183-251d9266-5e72-42d6-bada-4496afa89a80.JPG)
+
+![image](https://user-images.githubusercontent.com/66392216/171027253-93280659-e04f-4f04-a045-a1f0a4c400c4.png)
 
 ## Data quality summary
 
