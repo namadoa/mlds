@@ -213,19 +213,238 @@ Data columns (total 9 columns):
 ![12](https://user-images.githubusercontent.com/66392216/169720883-a0646177-8152-4ed0-9de1-9818ab81aa6a.JPG)
 
 ## Processed Data
+
 | Processed Dataset Name | Input Dataset(s)   | Data Processing Tools/Scripts | Link to Report |
 | ---:| ---: | ---: | ---: | 
-| Processed Dataset 1 | [Dataset1](link/to/dataset1/report), [Dataset2](link/to/dataset2/report) | [Python_Script1.py](link/to/python/script/file/in/Code) | [Processed Dataset 1 Report](link/to/report1)|
-| Processed Dataset 2 | [Dataset2](link/to/dataset2/report) |[script2.R](link/to/R/script/file/in/Code) | [Processed Dataset 2 Report](link/to/report2)|
-* Processed Data1 summary. <Provide brief summary of the processed data, such as why you want to process data in this way. More detailed information about the processed data should be in the Processed Data1 Report.>
-* Processed Data2 summary. <Provide brief summary of the processed data, such as why you want to process data in this way. More detailed information about the processed data should be in the Processed Data2 Report.> 
+| Lineas.csv | lineas_activas.csv, lineas_retiradas.csv, clientes_lineas_activas.csv, clientes_lineas_retiradas.csv, quejas_lineas.csv, reclamos_lineas.csv | [PreprocessScript.py](link/to/python/script/file/in/Code) | [Processed Dataset 1 Report](link/to/report1)|
+
+**Union de datasets**
+
+Unimos datasets de líneas retiradas y clientes retirados
+
+![im1](https://user-images.githubusercontent.com/105468214/171090073-85390ce2-9f73-45bb-98fd-7b09b2333512.png)
+
+Unimos datasets de líneas activas y de clientes activos:
+
+![im2](https://user-images.githubusercontent.com/105468214/171090095-0eec91dd-81fb-4615-9748-43cbfb023d96.png)
+
+**Limpieza de datos duplicados**
+
+Limpieza de líneas duplicadas en el dataset de líneas activas:
+
+![im3](https://user-images.githubusercontent.com/105468214/171090106-d61b4d5f-b17e-40c5-9e06-b4913d4eb140.png)
+
+Limpieza de líneas duplicadas en el dataset de líneas retiradas:
+
+![im4](https://user-images.githubusercontent.com/105468214/171090114-1ab25ade-a8f3-4009-977b-7a0b2c436fae.png)
+ 
+**Limpieza de datos faltantes**
+
+* Se imputa la media del valor del plan o el tipo de plan en los casos en que el valor del plan es nulo, en los dataset de líneas activas y líneas retiradas:
+
+![im5](https://user-images.githubusercontent.com/105468214/171090124-b83985ac-3a2c-429d-8e66-dac941c54d1e.png)
+ 
+* Se eliminan columnas Género, Estado civil, Profesión, Grado de escolaridad, Nivel de ingresos y de egresos correspondientes a la información del cliente tanto de los datasets de líneas retiradas como los de activas, debido alrededor del 90% de los registros tienen estas columnas nulas.
+
+![im6](https://user-images.githubusercontent.com/105468214/171090129-592be3b5-07ff-46d2-b045-e7bb389ccc4e.png)
+
+![im7](https://user-images.githubusercontent.com/105468214/171090137-ae7f01d0-c6dc-47f4-89f8-8020c6a0190e.png)
+
+**Selección y creación de nuevas características**
+
+* Se unen los datasets de líneas activas y líneas retiradas.
+* Se añaden las características Edad y Antiguedad, la primera es la edad del cliente de la línea al momento del retiro (último día de 2019 para líneas activas) y la segunda la antigüedad del servicio hasta el momento del retiro (último día de 2019 para líneas activas).
+
+![im8](https://user-images.githubusercontent.com/105468214/171090146-d788273e-4aa8-4b33-9347-5b44b632d88e.png)
+
+*	Se añade la característica de "Número de promedio quejas anual", a partir de la fecha de registro y el número de quejas registradas para cada línea telefónica en el dataset de quejas.
+
+![im9](https://user-images.githubusercontent.com/105468214/171090152-5d898744-894c-4bc2-876b-557b390734a9.png)
+
+
+*	Se añaden las características "Número promedio de reclamos anual" y "Valor promedio de reclamos anual", a partir de la fecha de registro, el valor reclamado y el número de reclamos registrados para cada línea telefónica en el dataset de reclamos.
+
+![im10](https://user-images.githubusercontent.com/105468214/171090161-d007f939-e6b6-422c-bbfd-174ad937ece1.png)
+
+*	Se eliminan las columnas Valor en reclamo y Tipo de cliente de los datasets de líneas retiradas y líneas activas, la primera porque es cero para casi el 100% de los registros en ambos datasets y la segunda porque tiene el mismo valor para casi el 100% de los registros.
+
+![im11](https://user-images.githubusercontent.com/105468214/171090169-07f04ab1-a7a0-4e12-ac3e-ee53395afec7.png) 
+
+*	Se eliminan las columnas de tipo fecha usadas para calcular la edad y la antigüedad (fecha de instalación, fecha de retiro y fecha de nacimiento).
+*	Se crea la característica clase a partir de la columna estado:
+
+> * 0 - Activo
+> * 1 - Retirado por no pago
+> * 2 - Deserción
+
+**Limpieza de outliers**
+
+Se identifican outliers en la columna saldo pendiente, se reemplaza el valor de estos outliers con un valor normal dentro del rango del campo.
+ 
+![im12](https://user-images.githubusercontent.com/105468214/171090639-7b9c92da-99e2-4bfe-81ad-7da45dbd4e8c.png)
+
+![im13](https://user-images.githubusercontent.com/105468214/171090670-e90f7afc-9bb6-4e39-a24f-365b11be12c4.png)
+
+**Dataset resultante:**
+ 
+Descripción de los campos del dataset:
+
+| column | type	| description |
+| ---:| ---: | ---: |
+| Plan |	STRING |	Plan de la oferta comercial suscrito por la línea |
+| Tipo de plan |	STRING |	P: prepago, S: postpago, C: control |
+| Ciclo	| STRING |	División administrativa de las líneas |
+| Tipo de identificación | STRING |	Tipo de identificación del cliente: Cédula, R.U.C, Pasaporte, Cédula de Extranjería, Otro |
+| Estado financiero	| STRING |Estado de la deuda del servicio: paz y salvo, mora | 
+| Ciudad | STRING | Ciudad de residencia del cliente: Ambato, Cuenca |
+| Edad | INT | Edad del cliente dueño de la línea |
+| Antiguedad | INT | Antiguedad del servicio |
+| Valor plan | INT | Valor mensual que se debe pagar por el plan |
+| Nro. promedio quejas anual | FLO | Número promedio de quejas que se registraron sobre el servicio anualmente |
+| Nro. promedio reclamos anual | FLO | Número promedio de reclamos que se registraron sobre el servicio anualmente |
+| Valor promedio reclamos anual	| FLO |	Valor promedio de los reclamos que se registraron sobre el servicio anualmente |
+| Saldo pendiente |	INT	| Valor total adeudado a la fecha |
+| Clase |	INT	| Etiqueta a predecir en el modelo: 0 - Activo, 1 - Retirado por no pago, 2 - Deserción
+
 
 ## Feature Sets
 
 | Feature Set Name | Input Dataset(s)   | Feature Engineering Tools/Scripts | Link to Report |
 | ---:| ---: | ---: | ---: | 
-| Feature Set 1 | [Dataset1](link/to/dataset1/report), [Processed Dataset2](link/to/dataset2/report) | [R_Script2.R](link/to/R/script/file/in/Code) | [Feature Set1 Report](link/to/report1)|
-| Feature Set 2 | [Processed Dataset2](link/to/dataset2/report) |[SQL_Script2.sql](link/to/sql/script/file/in/Code) | [Feature Set2 Report](link/to/report2)|
+| feature_set.npy | Lineas.csv | [Features_Script.py](link/to/R/script/file/in/Code) | [Feature Set1 Report](link/to/report1)|
 
-* Feature Set1 summary. <Provide detailed description of the feature set, such as the meaning of each feature. More detailed information about the feature set should be in the Feature Set1 Report.>
-* Feature Set2 summary. <Provide detailed description of the feature set, such as the meaning of each feature. More detailed information about the feature set should be in the Feature Set2 Report.> 
+Con el fin de obtener el vector de características que será el insumo del modelo se transformará el dataset preprocesado, de tal manera que las variables categóricas se conviertan a vectores numéricos y las variables numéricas serán escaladas o normalizadas:
+
+| column | type	| description |
+| ---:| ---: | ---: |
+| Plan |	STRING | Codificación one-hot |
+| Tipo de plan |	STRING | Codificación one-hot	 |
+| Ciclo	| STRING | Codificación one-hot	 |
+| Tipo de identificación | STRING | Codificación one-hot |
+| Estado financiero	| STRING | Codificación one-hot | 
+| Ciudad | STRING | Codificación one-hot |
+| Edad | INT | Escalamiento entre 0 y 1 (Min-max scaling) |
+| Antiguedad | INT | Escalamiento entre 0 y 1 (Min-max scaling) |
+| Valor plan | INT | Normalización con media 0 y desviación estándar de 1 (Standard scaling) |
+| Nro. promedio quejas anual | FLO | Normalización con media 0 y desviación estándar de 1 (Standard scaling)  |
+| Nro. promedio reclamos anual | FLO | Normalización con media 0 y desviación estándar de 1 (Standard scaling) |
+| Valor promedio reclamos anual	| FLO |	Normalización con media 0 y desviación estándar de 1 (Standard scaling) |
+| Saldo pendiente |	INT	| Normalización con media 0 y desviación estándar de 1 (Standard scaling)  |
+| Clase |	INT	| Normalización con media 0 y desviación estándar de 1 (Standard scaling) |
+
+
+Vector de características resultante:
+
+
+```
+
+['x0_BANDA ANCHA PREACTIVADO PREPAGO BIESS|0/30',
+ 'x0_CHIP + 2',
+ 'x0_CHIP + PREPAGO',
+ 'x0_CHIP + |3/30',
+ 'x0_CNT CHIP HSPA PLUS',
+ 'x0_CNT CHIP PREPAGO AUXCOMPSA',
+ 'x0_CNT CONECTADOS PREACTIVADO PREPAGO |3/30',
+ 'x0_DATOS Y VOZ CBM 0 CTRL 3.5G',
+ 'x0_DISCAPACITADO HSPA PLUS CONTROL',
+ 'x0_EMPRESA ABIERTO 3.5G',
+ 'x0_EMPRESA CONTROL',
+ 'x0_EMPRESA CONTROL 3.5G',
+ 'x0_INDIVIDUAL CONTROLADO',
+ 'x0_MULTIPLAN CONTROL SERV PUBLICO HSPA',
+ 'x0_MULTIPLAN CONTROL SERVIDOR PUBLICO 3.5G',
+ 'x0_MULTIPLAN CONTROL SERVIDOR PUBLICO GSM',
+ 'x0_MULTIPLAN CONTROLADO 3.5G',
+ 'x0_MULTIPLAN CONTROLADO GSM',
+ 'x0_MULTIPLAN EMPRESAS PRIVADAS 4G/3G CONTROLADO',
+ 'x0_MULTIPLAN EMPRESAS PUBLICAS 4G/3G CONTROLADO',
+ 'x0_MULTIPLANES EMPRESAS ABIERTO HSPA PLUS',
+ 'x0_MULTIPLANES EMPRESAS CONTROLADO HSPA PLUS',
+ 'x0_MULTIPLANES PERSONAS CONTROLADO HSPA PLUS',
+ 'x0_PAGO LO QUE HABLO 3.5G CONTROL TD',
+ 'x0_PAGO LO QUE HABLO ABIERTO GRUPAL TU',
+ 'x0_PAGO LO QUE HABLO ABIERTO TU',
+ 'x0_PAGO LO QUE HABLO CONTROL GRUPAL TD',
+ 'x0_PAGO LO QUE HABLO CONTROL GRUPAL TU',
+ 'x0_PAGO LO QUE HABLO CONTROL TD',
+ 'x0_PAGO LO QUE HABLO CONTROL TU',
+ 'x0_PLAN CNT CHIP HSPA+',
+ 'x0_PLAN CNT CHIP HSPA+ |3/30',
+ 'x0_PLAN CNT EP AUTOCONSUMO CONTROLADO PERFIL 2',
+ 'x0_PLAN CNT EP AUTOCONSUMO CONTROLADO PERFIL 4',
+ 'x0_PLAN CNT EP AUTOCONSUMO CONTROLADO PERFIL 5',
+ 'x0_PLAN COMERCIALIZADORES PREPAGO',
+ 'x0_PLAN CONTROLADO DATOS +VOZ 1',
+ 'x0_PLAN CONTROLADO DATOS +VOZ 2',
+ 'x0_PLAN CONTROLADO DATOS +VOZ 3',
+ 'x0_PLAN CONTROLADO DATOS +VOZ 4',
+ 'x0_PLAN CONTROLADO DATOS +VOZ 5',
+ 'x0_PLAN CONTROLADO DATOS +VOZ 6',
+ 'x0_PLAN CONTROLADO DATOS +VOZ 7',
+ 'x0_PLAN DE PRUEBAS ABIERTO LTE (VOZ)',
+ 'x0_PLAN GENERICO WCC GSM',
+ 'x0_PLAN MOVIL ESPECIAL',
+ 'x0_PLAN PREACTIVADO TURISTAS 1GB',
+ 'x0_PLAN PREACTIVADO TURISTAS 500MB',
+ 'x0_PLAN PREACTIVADO TURISTAS 800MB',
+ 'x0_PLAN PREACTIVADO TURISTAS LTE CORP 1GB',
+ 'x0_PLAN PREPAGO MIGRACION 4G',
+ 'x0_PLAN PROMO CAMPANAS',
+ 'x0_PLAN TARIFA UNICA $0.08 HSPA PLUS CTRL IND',
+ 'x0_PLAN TODOS CONECTADOS',
+ 'x0_PLAN VOZ CTRL IND',
+ 'x0_PREACTIVADO CHIP + PREPAGO',
+ 'x0_PREACTIVADO CHIP + |3/30',
+ 'x0_PREACTIVADO CNT CHIP DISTRIBUIDOR',
+ 'x0_PREACTIVADO CNT CHIP HSPA+ |3/30',
+ 'x0_PREACTIVADO CNT CHIP PREPAGO AUXCOMPSA',
+ 'x0_PREACTIVADO PREPAGO CNT CHIP HSPA PLUS',
+ 'x0_PREACTIVADO PREPAGO CNT KIT TU |3/30 GSM',
+ 'x0_PREACTIVADO SUPER CHIP |0/30 HSPA PLUS',
+ 'x0_PREACTIVADO TD |3/30',
+ 'x0_TARIFA DIFERENCIADA HSPA PLUS',
+ 'x0_TARIFA UNICA 3.5G  CONTROL CORP',
+ 'x0_TARIFA UNICA 3.5G  CONTROL IND',
+ 'x0_TARIFA UNICA GSM  ABIERTO IND',
+ 'x0_TARIFA UNICA GSM  CONTROL IND',
+ 'x0_TARIFA UNICA HSPA PLUS CTRL IND',
+ 'x0_VIRTUAL EMPRESA GSM',
+ 'x1_C',
+ 'x1_P',
+ 'x1_S',
+ 'x2_CLIENTES CONTRATO 1 - 7',
+ 'x2_CLIENTES CONTRATO 16 - 22',
+ 'x2_CLIENTES CONTRATO 23 - 31',
+ 'x2_CLIENTES CONTRATO 8 - 15',
+ 'x2_CLIENTES VENTA DIRECTA',
+ 'x2_CLIENTES VENTA DIRECTA GSM',
+ 'x2_MULTIAGENCIAS CNT',
+ 'x2_PREPAGO',
+ 'x2_TELECSA',
+ 'x3_Cédula',
+ 'x3_Cédula de Extranjería',
+ 'x3_Otro',
+ 'x3_Pasaporte',
+ 'x3_R.U.C',
+ 'x4_MORA',
+ 'x4_PAZ Y SALVO',
+ 'x5_AMBATO',
+ 'x5_CUENCA',
+ 'edad',
+ 'antiguedad',
+ 'valor plan',
+ 'nro. promedio quejas anual',
+ 'nro. promedio reclamos anual',
+ 'valor promedio reclamos anual',
+ 'saldo pendiente']
+
+```
+
+Donde:
+* X0: plan
+* X1: tipo de plan
+* X2: ciclo
+* X3: tipo de identificación
+* X4: estado financiero
+* X5: ciudad 
+
