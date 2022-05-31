@@ -286,7 +286,10 @@ Se identifican outliers en la columna saldo pendiente, se reemplaza el valor de 
 ![im13](https://user-images.githubusercontent.com/105468214/171090670-e90f7afc-9bb6-4e39-a24f-365b11be12c4.png)
 
 **Dataset resultante:**
- 
+
+![im14](https://user-images.githubusercontent.com/105468214/171090675-e8b2c082-fe0c-4b32-b6d7-ea8b575a711b.png)
+![im15](https://user-images.githubusercontent.com/105468214/171090680-d509c327-8486-4805-8d6a-2ff8f9ae1109.png)
+
 Descripción de los campos del dataset:
 
 | column | type	| description |
