@@ -1,13 +1,22 @@
 [tool.poetry]
-name = "packagename"
+name = "project_mlds6"
 version = "0.1.0"
-description = "Project template for data science projects"
-authors = ["Juan Lara <julara@unal.edu.co>"]
+description = "user churn prediction model"
+authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">3.8"
+mlflow = "^1.26.1"
+scikit-learn = "^1.1.1"
+pandas = "^1.4.2"
+numpy = "^1.22.4"
+pydantic = "^1.9.1"
+protobuf = "^4.21.1"
+imblearn = "^0.0"
+openpyxl = "^3.0.10"
 
 [tool.poetry.dev-dependencies]
+ipython = "^8.4.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
