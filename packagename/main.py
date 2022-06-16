@@ -61,7 +61,6 @@ if __name__ == "__main__":
     X, y = extractor.extract() 
 
     print(X.shape)
-    print(100*'-')
     print(y.shape)
 
     metrics_kind = MetricsKind(accuracy=True, f1_score=True)
