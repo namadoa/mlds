@@ -4,5 +4,5 @@ entry_points:
    project_mlds6_rf:
       parameters:
         n_estimators: {type: int, default: 100}
-        max_depth: {type: int, default: 10}
+        max_depth: {type: int, default: 30}
       command: "python packagename/main.py --n_estimators {n_estimators} --max_depth {max_depth}"
