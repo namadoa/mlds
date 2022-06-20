@@ -1,5 +1,11 @@
-**/*__pycache__/*
 *.env
 env_vars*
 credentials*
 **/build/*
+**__pycache__
+*.lock
+*.csv
+*.xlsx
+*.parquets
+*.venv/*
+*.ipynb
